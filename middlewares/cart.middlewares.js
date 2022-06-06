@@ -34,30 +34,35 @@ const cartExists = catchAsync(async (req, res, next) => {
 
 module.exports = { cartExists };
 
+// window._ = require('lodash');
 
-// const cartExists = catchAsync(async (req, res, next) => {
-//   const { sessionUser } = req;
+// try {
+//     require('bootstrap');
+// } catch (e) {}
 
-//   const cart = await Cart.findOne({
-//     where: {
-//       userId: sessionUser.id,
-//       status: 'active',
-//     },
-//     include: [
-//       {
-//         model: ProductInCart,
-//         include: Product,
-//       },
-//     ],
-//   });
+// /**
+//  * We'll load the axios HTTP library which allows us to easily issue requests
+//  * to our Laravel back-end. This library automatically handles sending the
+//  * CSRF token as a header based on the value of the "XSRF" token cookie.
+//  */
 
-//   if (!cart) {
-//     return next(new AppError(400, 'This user does not have a cart yet'));
-//   }
+// window.axios = require('axios');
 
-//   req.cart = cart;
+// window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-//   next();
-// });
+// /**
+//  * Echo exposes an expressive API for subscribing to channels and listening
+//  * for events that are broadcast by Laravel. Echo and event broadcasting
+//  * allows your team to easily build robust real-time web applications.
+//  */
 
-// module.exports = { cartExists };uince pasos
+// // import Echo from 'laravel-echo';
+
+// // window.Pusher = require('pusher-js');
+
+// // window.Echo = new Echo({
+// //     broadcaster: 'pusher',
+// //     key: process.env.MIX_PUSHER_APP_KEY,
+// //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+// //     forceTLS: true
+// // });
